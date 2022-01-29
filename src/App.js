@@ -78,7 +78,7 @@ function App() {
               <div className="text-gray-50 mb-2  text-xl">
                 {weather.name},{weather.sys.country}
               </div>
-              <div className="text-gray-300 font-thin text-sm">
+              <div className="text-gray-200 font-thin text-sm">
                 {dateBuilder(new Date())}
               </div>
             </div>
@@ -94,14 +94,14 @@ function App() {
         ) : (
           ""
         )}
-        {/* footer */}
-        <div className=" relative flex justify-center mt-40">
-          <GlobeIcon className="h-5 w-5 text-gray-300/90 mr-2 " />
-          <p className=" text-gray-300/90 ">Copyright 2022</p>
-
-          {/* <a href="https://instagram.com/nanda_novan">@nanda_novan</a> */}
-        </div>
       </main>
+      {/* footer */}
+      <div className=" flex justify-center mt-72 ">
+        <GlobeIcon className="h-5 w-5 text-gray-100 mr-2 " />
+        <p className=" text-gray-300/90 ">Copyright 2022</p>
+
+        {/* <a href="https://instagram.com/nanda_novan">@nanda_novan</a> */}
+      </div>
     </div>
   );
 }
