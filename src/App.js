@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import { LocationMarkerIcon, GlobeIcon } from "@heroicons/react/solid";
@@ -57,8 +56,8 @@ function App() {
     return `${day} ${date} ${month} ${year}`;
   };
   return (
-    <div className="app pt-20">
-      <main className="max-w-screen-sm mx-auto ">
+    <div className=" app pt-20 ">
+      <main className=" max-w-screen-md mx-auto  bg-black/30 py-20 rounded-lg ">
         <div className="text-center">
           <input
             type="text"
@@ -66,7 +65,7 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
-            className="bg-transparent w-1/2 text-gray-50 text-sm border rounded-lg border-gray-200 p-4  "
+            className="bg-transparent w-8/12 text-gray-50 text-sm border rounded-lg border-gray-50 p-4  "
           />
         </div>
 
@@ -74,9 +73,9 @@ function App() {
           <div className="text-center mt-8">
             <div>
               <div className="flex justify-center">
-                <LocationMarkerIcon className="w-8 h-8 text-gray-300/80 mb-2" />
+                <LocationMarkerIcon className="w-8 h-8 text-gray-200 mb-2" />
               </div>
-              <div className="text-gray-300 mb-2  text-xl">
+              <div className="text-gray-50 mb-2  text-xl">
                 {weather.name},{weather.sys.country}
               </div>
               <div className="text-gray-300 font-thin text-sm">
@@ -84,10 +83,10 @@ function App() {
               </div>
             </div>
             <div>
-              <div className="bg-gray-300/20 max-w-fit mx-auto p-5 text-gray-300 font text-3xl my-4 rounded-md">
+              <div className="bg-gray-200/20 max-w-fit mx-auto p-5 text-gray-50 font text-3xl my-4 rounded-md">
                 {Math.round(weather.main.temp)}°C
               </div>
-              <div className="text-gray-300 font-medium">
+              <div className="text-gray-50 font-medium">
                 {weather.weather[0].main}
               </div>
             </div>
